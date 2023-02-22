@@ -3,6 +3,4 @@ class Group < ApplicationRecord
     has_many :payments, dependent: :destroy
 
     validates :name, :icon, presence: true
-
-
 end
