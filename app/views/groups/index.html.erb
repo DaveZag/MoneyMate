@@ -1,0 +1,10 @@
+<section>
+    <header  class='w-full primary-color text-center text-white py-4 px-2'>
+        <h2 class="text-xl w-full text-center  md:text-2xl">Categories</h2>
+  </header>
+
+  <div class="container mb-5 px-2 md:w-1/2 md:mx-auto">
+    <%= render partial: "group", collection: @groups %>
+  </div>
+  <%= link_to "Add New Category", new_group_path, class:"btn secondary-color text-white md:text-lg ml-2 block w-fit md:mx-auto" %>
+</section>

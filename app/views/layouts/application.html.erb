@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= hotwire_livereload_tags if Rails.env.development? %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
-    <%= hotwire_livereload_tags if Rails.env.development? %>
   </head>
 
   <body>
-    <main class="container mx-auto mt-28 px-5 flex">
+    <main class="container flex flex-col max-w-full">
       <%= yield %>
     </main>
   </body>

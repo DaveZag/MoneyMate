@@ -1,0 +1,33 @@
+<section >
+  <header  class='w-full primary-color text-white flex items-center justify-between relative pt-4 pb-4 px-2'>
+        <%= link_to "Back", groups_path, class: 'w-fit text-base hover' %>
+        <h2 class="text-xl text-center w-fit  absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:text-2xl">New category</h2>
+  </header>
+  <div class=" flex justify-center">
+    <%= form_with model: @group, url: groups_path(@group), class: 'flex flex-col gap-2 mt-3' do |f| %>
+        <% if @group.errors.any? %>
+            <div style="color: red">
+                <h2><%= pluralize(@group.errors.count, "error") %> prohibited this group from being saved:</h2>
+
+                <ul>
+                    <% @group.errors.each do |error| %>
+                    <li><%= error.full_message %></li>
+                    <% end %>
+                </ul>
+            </div>
+        <% end %>
+
+      <div class="field">
+        <%= f.text_field :name, autofocus: true, class:"py-2 px-4 border w-full focus:outline-orange-400", hide_label: true, placeholder: "Category Name", required: true %>
+      </div>
+
+      <div class="field">
+        <%= f.text_field :icon, autofocus: true, class:"py-2 px-4 border w-full focus:outline-orange-400", hide_label: true, placeholder: "Category Icon (icon link)", required: true %>
+      </div>
+
+      <div class="actions self-center">
+        <%= f.submit "Create", class:"btn secondary-color text-white px-8 py-2" %>
+      </div>
+    <%end%>
+  </div>
+</section>

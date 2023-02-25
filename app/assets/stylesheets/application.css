@@ -1,17 +1,32 @@
+body {
+  min-height: 100vh;
+  background-color: #f1f3f2;
+}
+
 .primary-color {
-  background-color: #3778c2;
+  background-color: #3778c2 !important;
 }
 
 .secondary-color {
-  background-color: #5fb523;
+  background-color: #5fb523 !important;
 }
 
 .last-color {
-  background-color: #434b54;
+  background-color: #434b54 !important;
 }
 
 .btn {
   padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
+  border-radius: 0.2rem;
   border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  filter: brightness(95%);
+}
+
+.hover:hover {
+  font-weight: 500;
+  cursor: pointer;
 }

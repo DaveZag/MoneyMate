@@ -2,11 +2,12 @@ class GroupsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @groups = Group.where(author: current_user)
+    @groups = Group.where(author_id: current_user)
   end
 
   def show
-    @group = Group.find(params[:id])
+    @group = Group.includes(:payments).find(params[:id])
+    @payments = @group.latest_payments
   end
 
   def new
@@ -22,10 +23,8 @@ class GroupsController < ApplicationController
     respond_to do |format|
       if @group.save
         format.html { redirect_to groups_path, notice: 'Group was successfully created.' }
-        format.json { render :show, status: :created, location: @group }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @group.errors, status: :unprocessable_entity }
       end
     end
   end

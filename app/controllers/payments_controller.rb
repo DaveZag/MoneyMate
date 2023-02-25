@@ -1,11 +1,6 @@
 class PaymentsController < ApplicationController
   before_action :authenticate_user!
 
-  def index
-    @group = Group.includes(:payments).find(params[:group_id])
-    @payments = @group.latest_payments
-  end
-
   def new
     @groups = Group.where(author: current_user)
     @payment = Payment.new

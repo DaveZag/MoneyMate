@@ -1,0 +1,16 @@
+<%= link_to group_path(group) do %>
+  <div class="bg-white w-full mt-4 flex justify-between px-2 py-2 gap-6 hover:pointer hover:bg-blue-100">
+    <div>
+      <img src=<%= group.icon %> class="card-img-top" alt=<%= group.name %>>
+    </div>
+    <div class="card-body flex w-3/5 gap-2">
+      <div class="flex w-full justify-between">
+       <header> 
+          <h5 class="card-title text-lg font-bold"><%= group.name %></h5>
+          <p class="text-sm"><%= group.updated_at.strftime('%d-%b-%Y') %></p>
+       </header>
+      </div>  
+    </div>
+    <p class="card-text pr-2"><strong>$<%= group.total_amount %></strong></p>
+  </div>
+<% end %>
