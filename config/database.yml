@@ -17,6 +17,7 @@ test:
 
 production:
   <<: *default
+  url: <%= ENV["DATABASE_URL"] %>
   database: MoneyMate_production
   username: MoneyMate
   password: <%= ENV["MONEYMATE_DATABASE_PASSWORD"] %>
