@@ -1,5 +1,5 @@
 databases:
-  - name: moneymate
+  - name: moneymate-db
     databaseName: moneymate
     user: moneymate
     plan: free
