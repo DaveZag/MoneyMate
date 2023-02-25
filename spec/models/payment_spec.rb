@@ -1,5 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe Payment, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  # Test validation
+  it { should validate_presence_of(:name) }
+  it { should validate_presence_of(:amount) }
+  it { should validate_presence_of(:group) }
+
+  # Test associations
+  it { should belong_to(:author) }
+  it { should belong_to(:group) }
 end
