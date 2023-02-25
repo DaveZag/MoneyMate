@@ -31,3 +31,4 @@ RSpec.describe Group, type: :model do
       expect(subject).to be_valid
     end
   end
+end
