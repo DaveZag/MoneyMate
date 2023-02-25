@@ -1,11 +1,11 @@
 <%= link_to group_path(group.id) do %>
   <div class="bg-white w-full mt-4 flex justify-between shadow px-2 py-2 gap-6 hover:pointer hover:bg-blue-100">
-    <div class="flex-1">
-      <img src=<%= group.icon %> class="card-img-top" alt=<%= group.name %>>
+    <div class="flex-1 text-center">
+      <i class="<%=group.icon%> fa-3x"></i>
     </div>
     <div class="card-body flex flex-1 w-3/5 gap-2">
       <div class="flex w-full justify-between">
-       <header> 
+       <header class="text-center"> 
           <h5 class="card-title text-lg font-bold"><%= group.name %></h5>
           <em class="text-xs"><%= group.updated_at.strftime('%d-%b-%Y') %></em>
        </header>

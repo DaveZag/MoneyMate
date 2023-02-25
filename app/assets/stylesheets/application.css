@@ -57,6 +57,20 @@ form:has(button.transtaction-btn) {
   width: 100%;
 }
 
+.icon-container {
+  background-color: #0000005e;
+  backdrop-filter: blur(2px);
+  display: flex;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+li:has(i):hover {
+  cursor: pointer;
+}
+
 @media screen and (max-width: 768px) {
   form {
     width: 100%;
