@@ -1,0 +1,80 @@
+body {
+  min-height: 100vh;
+  background-color: #f1f3f2;
+}
+
+.primary-color {
+  background-color: #3778c2 !important;
+}
+
+.secondary-color {
+  background-color: #5fb523 !important;
+}
+
+.last-color {
+  background-color: #434b54 !important;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  filter: brightness(95%);
+}
+
+.hover:hover {
+  font-weight: 500;
+  cursor: pointer;
+}
+
+input,
+textarea,
+select {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.select-container > select {
+  padding: 0.5rem 1rem;
+  width: 100%;
+}
+
+.select-container > select:hover,
+select > option:hover {
+  cursor: pointer !important;
+}
+
+form {
+  width: 40%;
+}
+
+form:has(button.transtaction-btn) {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.icon-container {
+  background-color: #0000005e;
+  backdrop-filter: blur(2px);
+  display: flex;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+li:has(i):hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  form {
+    width: 100%;
+    padding-inline: 0.5rem;
+    padding-top: 0.5rem;
+  }
+}

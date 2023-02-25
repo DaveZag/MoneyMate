@@ -1,0 +1,23 @@
+# PostgreSQL. Versions 9.3 and up are supported.
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: <%= ENV["MONEYMATE_DATABASE_USERNAME"] %>
+  password: <%= ENV["MONEYMATE_DATABASE_PASSWORD"] %>
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: MoneyMate_development
+
+test:
+  <<: *default
+  database: MoneyMate_test
+
+production:
+  <<: *default
+  url: <%= ENV["DATABASE_URL"] %>
+  database: MoneyMate_production
+  username: MoneyMate
+  password: <%= ENV["MONEYMATE_DATABASE_PASSWORD"] %>

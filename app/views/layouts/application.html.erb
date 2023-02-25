@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MoneyMate</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= hotwire_livereload_tags if Rails.env.development? %>
+    <script src="https://kit.fontawesome.com/9b54de88d2.js" crossorigin="anonymous"></script>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+    <%= favicon_link_tag asset_path('moneymate.png')%>
+  </head>
+
+  <body>
+    <main class="container flex flex-col max-w-full">
+      <%= yield %>
+    </main>
+  </body>
+</html>
