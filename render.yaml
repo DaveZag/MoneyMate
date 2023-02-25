@@ -1,8 +1,6 @@
 databases:
   - name: postgres
   - ipAllowList: []
-    # databaseName: mysite
-    # user: mysite
 
 services:
   - type: web
