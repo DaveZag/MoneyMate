@@ -1,0 +1,5 @@
+<div class="bg-white w-full mt-4 flex px-2 py-4 justify-between shadow md:w-2/5 md:mx-auto">
+    <h4 class="card-title text-lg text-center font-semibold flex-1"><%= payment.name %></h4>
+    <p class="flex-1 text-center">$<%= payment.amount %></p>
+    <p class="text-sm flex-1 text-center"><%= payment.created_at.strftime('%d-%b-%Y') %></p>
+</div>

@@ -1,23 +1,21 @@
-<section class="transactions-section">
+<section class="transactions-section flex flex-col">
   <header  class='w-full primary-color text-white flex items-center justify-between relative pt-4 pb-4 px-2'>
-        <%= link_to "Back", groups_path, class: 'w-fit text-base hover' %>
+        <%= link_to "Back", groups_path, class: 'w-fit text-base hover md:ml-32' %>
         <h2 class="text-xl text-center w-fit  absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:text-2xl"><%=@group.name%></h2>
   </header>
 
-<p style="color: green"><%= notice %></p>
+  <p style="color: green"><%= notice %></p>
 
-<%if @payments.any?%>
-  <div>
-    <%= render partial: 'payment', collection: @payments%>
-  </div>
-<%else%>
-  <div class='error-message flex justify-center p-2'>
-    <p class="shadow-lg bg-white p-3">No Transactions yet. Please add some.</p>
-  </div>
+  <%if @payments.any?%>
+    <div class="px-2">
+      <%= render partial: 'shared/payment', collection: @payments%>
+    </div>
+  <%else%>
+    <div class='error-message flex justify-center p-2'>
+      <p class="shadow-lg bg-white p-3">No Transactions yet. Please add some.</p>
+    </div>
+  <%end%>
 
-<%end%>
-
-<%= button_to "Add Transaction", new_payment_path, method: :get, class: "btn secondary-color text-white md:text-lg ml-3 block w-fit md:mx-auto", params: {current_group: @group.id} %>
-
+   <%= button_to "Add Transaction", new_payment_path, method: :get, params: {current_group: @group.id}, class: "btn secondary-color transtaction-btn w-fit text-white ml-3 mt-2 md:text-lg md:self-center" %>
 
 </section>

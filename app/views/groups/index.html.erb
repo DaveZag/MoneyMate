@@ -1,10 +1,18 @@
 <section>
-    <header  class='w-full primary-color text-center text-white py-4 px-2'>
-        <h2 class="text-xl w-full text-center  md:text-2xl">Categories</h2>
+    <header  class='w-full primary-color  flex relative text-white py-4 px-1'>
+        <%= button_to 'Logout', destroy_user_session_path, method: :delete, class: 'py-1 px-2 -ml-1 rounded last-color text-sm text-white hover:pointer hover:scale-110 md:ml-32' %>
+        <h2 class="text-xl w-fit absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:text-2xl">Categories</h2>
   </header>
 
-  <div class="container mb-5 px-2 md:w-1/2 md:mx-auto">
-    <%= render partial: "group", collection: @groups %>
-  </div>
-  <%= link_to "Add New Category", new_group_path, class:"btn secondary-color text-white md:text-lg ml-2 block w-fit md:mx-auto" %>
+  <p style="color: green"><%= notice %></p>
+  <%if @groups.any?%>
+    <div class="container mb-5 px-2 md:w-1/2 md:mx-auto">
+      <%= render partial: "group", collection: @groups %>
+    </div>
+  <%else%>
+    <div class='error-message flex justify-center p-2'>
+      <p class="shadow-lg bg-white p-3">No Categories yet. Please add some.</p>
+    </div>
+  <%end%>
+  <%= link_to "Add New Category", new_group_path, class:"btn secondary-color text-white ml-2 block w-fit md:mx-auto md:text-lg" %>
 </section>
