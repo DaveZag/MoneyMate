@@ -47,9 +47,7 @@ MoneyMate is an expenses management app created using Ruby on Rails. It allows a
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
-
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
+- [Live Demo Link](https://moneymate-5vc4.onrender.com/)
 
 ## Preview
 
