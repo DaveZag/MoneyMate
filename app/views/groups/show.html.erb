@@ -1,7 +1,8 @@
 <section class="transactions-section flex flex-col">
   <header  class='w-full primary-color text-white flex items-center justify-between relative pt-4 pb-4 px-2'>
-        <%= link_to "Back", groups_path, class: 'w-fit text-base hover md:ml-32' %>
+        <%= link_to "Back", groups_path, class: 'w-fit text-base hover md:ml-64' %>
         <h2 class="text-xl text-center w-fit  absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:text-2xl"><%=@group.name%></h2>
+        <p class="absolute top top-1/2 -translate-y-1/2 right-4 md:right-64">Total: $<%=@group.total_amount%><p>
   </header>
 
   <p style="color: green"><%= notice %></p>
