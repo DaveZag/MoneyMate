@@ -31,6 +31,12 @@ body {
   cursor: pointer;
 }
 
+input,
+textarea,
+select {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
 .select-container > select {
   padding: 0.5rem 1rem;
   width: 100%;
@@ -39,12 +45,6 @@ body {
 .select-container > select:hover,
 select > option:hover {
   cursor: pointer !important;
-}
-
-input,
-textarea,
-select {
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 form {

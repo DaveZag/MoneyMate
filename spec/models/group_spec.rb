@@ -11,7 +11,6 @@ RSpec.describe Group, type: :model do
   it { should validate_presence_of(:name) }
   it { should validate_presence_of(:icon) }
 
-
   context 'when creating a group' do
     subject { Group.new(name: 'Games', icon: 'games.jpg', author: user) }
 
