@@ -5,7 +5,7 @@ RSpec.describe Group, type: :model do
 
   # Test associations
   it { should belong_to(:author) }
-  it { should have_many(:transactions) }
+  it { should have_many(:payments) }
 
   # Test validation
   it { should validate_presence_of(:name) }

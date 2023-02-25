@@ -115,7 +115,7 @@ Example command:
 
 ```sh
   gem install rails rspec
-  rails spec spec/models/
+  rspec ./spec/models/
 ```
 
 ## 👥 Author <a name="authors"></a>

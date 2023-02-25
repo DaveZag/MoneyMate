@@ -9,7 +9,7 @@ RSpec.describe User, type: :model do
   end
 
   it 'should return the correct Username' do
-    expect(@user.name).to be 'Dave'
+    expect(@user.name).to eq('Dave')
   end
 
   it 'User should be invalid' do

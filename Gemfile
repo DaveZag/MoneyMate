@@ -5,6 +5,11 @@ ruby '3.1.3'
 
 gem 'rubocop', '>= 1.0', '< 2.0'
 
+# matchers used to test assossiation
+gem 'shoulda-matchers', '~> 5.0'
+
+gem 'factory_bot_rails'
+
 # For user authorizations
 gem 'cancancan'
 
