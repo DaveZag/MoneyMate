@@ -14,13 +14,12 @@ RSpec.describe User, type: :model do
 
   it 'User should be invalid' do
     @user.name = ''
-    expect(user).to_not be_valid
+    expect(@user).to_not be_valid
 
     @user.email = ''
-    expect(user).to_not be_valid
+    expect(@user).to_not be_valid
 
     @user.password = ''
-    expect(user).to_not be_valid
+    expect(@user).to_not be_valid
   end
-
 end
