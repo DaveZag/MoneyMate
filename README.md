@@ -25,7 +25,7 @@
 
 # 📖 MoneyMate <a name="about-project"></a>
 
-MoneyMate is an expenses management app created using Ruby on Rails. It allows a user to create new categories and create new expenses for each category thus you have a list of transactions associated with a category.
+MoneyMate is an expenses management app created using Ruby on Rails. It allows a user to create new categories and create new expenses for each category thus, this one can track their expenses in a well structured manner.
 
 ## 🛠 Built With <a name="built-with"></a>
 
